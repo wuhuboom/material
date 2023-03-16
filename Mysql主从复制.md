@@ -72,7 +72,7 @@ mysql -uroot -p
 #### 输入
 
 ```mysql
-change master to master_host='139.180.155.239',master_port=3306,master_user='username',master_password='password',master_log_file='mysql-bin.000095',master_log_pos=145604639;  
+change master to master_host='139.180.155.239',master_port=3306,master_user='username',master_password='password',master_log_file='mysql-bin.000101',master_log_pos=61684633;  
 ```
 
 
@@ -125,7 +125,7 @@ query_cache_size
 ### 这个参数用于配置InnoDB存储引擎事务日志的刷新方式。在高并发的情况下，建议将其设置为1，以确保每个事务的日志都被持久化到磁盘上，从而提高系统的可靠性。
 innodb_flush_log_at_trx_commit=1
 ### 这个参数用于配置InnoDB存储引擎的事务日志文件的大小。在高并发的情况下，应该适当增加这个值，以避免事务日志文件被频繁切换的开销。建议将其设置为物理内存的10%-25%左
-innodb_log_file_size
+innodb_log_file_size  
 ```
 
 

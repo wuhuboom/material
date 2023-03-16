@@ -55,3 +55,24 @@ kernel.shmmax=4294967295
 vm.swappiness=0
 ```
 
+# 修改服务器最大打开文件的数量
+
+```shell
+### 修改服务器最大打开文件的数量
+
+ulimit -n
+##修改文件
+/etc/rc.local
+ulimit SHn 65535 
+##修改文件
+/etc/profile  
+ulimit -SHn  65535
+##/etc/security/limits.conf  vim /etc/security/limits.conf
+
+
+* soft nofile 65535
+* hard nofile 65535
+
+
+```
+
